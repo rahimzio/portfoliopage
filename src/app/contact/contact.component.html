@@ -1,0 +1,56 @@
+<section>
+    <img class="color2" src="assets\GReen shadow.png">
+    <h1>Contact</h1>
+    <div class="line"></div>
+
+    <div class="content-div" >
+    <div  class=" text-box">
+        <h2>Got a Problem to solve?</h2>
+    <span>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work</span>
+    <div style="margin-top: 40px;"><span>Need a Frontend developer? </span><span style="font-weight: 700;"> contatct me!</span></div>
+    </div>
+    
+   
+    <div class="input-class">
+  
+    <div class="contact-form-div" [class.contact-form-div-fail]="nameFail">
+        <input [(ngModel)]="ContactData.name" class="input" id="nameField" (input)="nameFieldValue($event)" placeholder="Your Name">
+        <img class="fail-img" *ngIf="nameFail" src="assets\Frame (1).png">
+        <img class="fail-img" *ngIf="nameRight" src="assets\Frame.png">
+        <span *ngIf="nameFail" style="color: red;">Your name is required</span>
+      </div>
+    
+      <div class="contact-form-div" [class.contact-form-div-fail]="emailFail">
+        <input [(ngModel)]="ContactData.email" class="input" id="emailField" (input)="emailFieldValue($event)" placeholder="Your Email">
+        <img class="fail-img" *ngIf="emailFail" src="assets\Frame (1).png">
+        <img class="fail-img" *ngIf="emailRight" src="assets\Frame.png">
+        <span *ngIf="emailFail" style="color: red;">Invalid email format</span>
+      </div>
+    
+      <div class="contact-form-div">
+        <input [(ngModel)]="ContactData.message" id="messageField" (input)="messageValue($event)" class="input-message contact-form-div hover" placeholder="Your Message">
+        <img class="fail-img" *ngIf="messageFail" src="assets\Frame (1).png">
+        <img class="fail-img" *ngIf="messageRight" src="assets\Frame.png">
+        <span *ngIf="messageFail" style="color: red;">Invalid message length</span>    
+      </div>
+
+      <div *ngIf="sendBnt" class="send-bnt-div">
+        <div>
+          <div class="policy">
+          <div (click)="checkBox()" class="box"><img *ngIf="clicked"  src="assets\menu\check_box (1).png">
+          </div><span>I've read the <span class="violet">privacy policy</span> and agree to the processing of my data as outlined.Please accept the privacy policy. </span>
+          </div>
+          <span class="please-accept" *ngIf="pleaseAccept" >please accept privacy policy</span>
+          <div class="send-message" (click)="SendMessage()">
+            <span id="sendMessage" (click)="SendMessage()">Send message :)</span>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    </div>
+    <div class="up-bnt"><a href="#home"><img src="assets\menu\Go up button.png"></a></div>
+<div class="color"><img src="assets\Vector 5.png"></div>
+
+<app-contactform></app-contactform>
+</section>

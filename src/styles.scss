@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    border: none;
+    font-family: 'Roboto Condensed';
+}
+/* roboto-condensed-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/roboto-condensed-v27-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@media(max-width:900px){
+  body{
+    overflow-x: hidden;
+  }
+}
+body{
+    background-color: rgba(20, 29, 47, 1);
+    overflow-x: hidden;
+}
+
+/* Für den gesamten Scrollbalken */
+::-webkit-scrollbar {
+    width: 12px; /* Breite des Scrollbalkens */
+    border-radius: 45px;
+  }
+  
+  /* Für den Griff des Scrollbalkens */
+  ::-webkit-scrollbar-thumb {
+    background-color: #12f7ff; /* Hintergrundfarbe des Griffes */
+    border-radius: 45px; /* Randradius des Griffes */
+  }
+  
+  /* Hintergrund des Scrollbalkens (Track) */
+  ::-webkit-scrollbar-track {
+    background-color:rgba(20, 29, 47, 1); /* Hintergrundfarbe des Tracks */
+    border-radius: 45px;
+  }
